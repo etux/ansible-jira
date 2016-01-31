@@ -97,6 +97,9 @@
     group=root
     mode=0755
   tags: jira
+  
+- name: Create jira service unit file
+  template: src=jira.service.j2 dest=/lib/systemd/system/jira.service owner=root group=root mode=0644
 
 - name: Ensure JIRA service is started and enabled on boot
   service: >
