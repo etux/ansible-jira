@@ -104,7 +104,5 @@
 - name: Ensure JIRA service is started and enabled on boot
   service: >
     name=jira
-    state=started
-    pattern='/usr/bin/java -Djava.util.logging.config.file=/opt/atlassian/jira/atlassian-jira-{{ jira_version }}-standalone/conf/logging.properties'
     enabled=yes
   tags: jira
