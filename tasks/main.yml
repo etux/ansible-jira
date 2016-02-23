@@ -86,7 +86,6 @@
     owner=jira
     group=jira
     mode=0755
-  notify: restart jira
   tags: jira
 
 - name: Create JIRA init script
