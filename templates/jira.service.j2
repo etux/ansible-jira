@@ -5,6 +5,7 @@ After=network.target
 [Service]
 Type=forking
 User=jira
+PermissionsStartOnly=true
 PIDFile="{{ jira_install_dir }}/current"/work/catalina.pid
 # Added in order to prepare the database for the first run.
 ExecStartPre="{{  mysql_client_init_script_path }}"
